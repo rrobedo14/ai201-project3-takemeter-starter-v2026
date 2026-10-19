@@ -42,7 +42,7 @@
 <!-- Your community, and what your classifier sorts posts into. Three or four
      sentences. -->
 
-
+This classifier analyzes public discussion posts from `r/nba` centered around player performance and career legacy. It categorizes text into three distinct writing styles: tactical **analysis**, sweeping **hot_take** commentary, and immediate game **reaction** text. By training on these specific patterns, the model automatically separates objective basketball breakdowns from emotional fan discourse.
 
 ---
 
