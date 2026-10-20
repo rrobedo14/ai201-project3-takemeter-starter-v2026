@@ -96,17 +96,21 @@ If the text is an immediate, in-the-moment emotional outburst tied to tonight's 
 
 **Where the posts came from:**
 
+Public discussion posts collected from r/nba threads focusing on LeBron James and basketball commentary.
+
 **How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
 Say so plainly — the disclosure is required, not penalised. -->
+
+I labeled the first 20 posts completely cold (manually, without assistance or external tools) to establish my baseline judgment, marking them as cold in the note column. The remaining 180 posts were pre-labeled using an AI model seeded with my taxonomy definitions, after which I manually read, verified, and corrected every single row before marking them as pre-labeled.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| `analysis` | 68 | 34.0% |
+| `hot_take` | 67 | 33.5% |
+| `reaction` | 65 | 32.5% |
+| **Total** | 200 | 100% |
 
 **Three hard cases**
 
@@ -114,26 +118,23 @@ Say so plainly — the disclosure is required, not penalised. -->
      been, and what you chose. These are worth more than the easy 190. -->
 
 **1.**
-> *The post:*
+> *The post:* "He scored 38 points tonight, but he completely checked out on defense in the 4th quarter like he always does when the pressure rises."
 >
-> *Could have been:*
+> *Could have been:* `analysis` or `hot_take`
 >
-> *I chose, because:*
+> *I chose, because:* I labeled it `hot_take`. Although it opens with a checkable stat (38 points), the single statistic is used purely as flavor text for a sweeping, unsupported narrative about his general career character ("like he always does").
 
 **2.**
-> *The post:*
+> *The post:* "Looking at the fourth quarter play-by-play, he missed 4 straight shots in the final 3 minutes and turned it over twice. He is a fraud who shrinks when the lights get bright."
 >
-> *Could have been:*
+> *Could have been:* `analysis` or `hot_take`
 >
-> *I chose, because:*
+> *I chose, because:* I labeled it `analysis`. The core argument relies on specific, checkable play-by-play evidence from that game (4 missed shots and 2 turnovers in the final 3 minutes) as structural proof, satisfying the analysis decision rule despite the heated concluding tone.
 
 **3.**
-> *The post:*
+> *The post:* "We lost by 25 points tonight because he refuses to play transition defense anymore and just complains to the refs."
 >
-> *Could have been:*
->
-> *I chose, because:*
-
+> *Could have been:* `hot_take` or `reaction`
 ---
 
 ## The Training Run
@@ -141,17 +142,26 @@ Say so plainly — the disclosure is required, not penalised. -->
 <!-- Your starting model, your settings, and anything you changed and why. -->
 
 **Base model:**
+`distilbert-base-uncased` (passed via `BASE_MODEL`)
 
 **Settings:** <!-- epochs, learning rate, batch size, seed -->
+* Epochs: 3 (passed via `EPOCHS`)
+* Learning rate: $2e-5$ (passed via `LEARNING_RATE`)
+* Batch size: 16 (passed via `BATCH_SIZE`)
+* Seed: 42 (passed via `SEED`)
 
 **Anything I changed from the defaults, and why:**
+None. I kept all training settings and hyperparameters at their standard notebook defaults.
 
 **Split sizes:** <!-- train / val / test, and per-label counts in the test
 split. If a label had fewer than about 8 in test, say so — it explains a lot
 of next unit's variance. -->
-
-
-
+* Train / Val / Test split: **train 139 · val 31 · test 30**
+* Per-label counts across splits:
+  * `analysis`: train 46, val 11, test 10
+  * `hot_take`: train 46, val 10, test 10
+  * `reaction`: train 47, val 10, test 10
+* No label falls below 8 in the test split (each has exactly 10).
 ---
 
 ## How I Used AI
@@ -165,17 +175,18 @@ of next unit's variance. -->
 
 **Moment 1**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* A classification pass on the raw `r/nba` dataset posts using my custom taxonomy definitions for `analysis`, `hot_take`, and `reaction`.
+- *What came back:* A batch of pre-labeled rows with initial category predictions.
+- *What I changed:* Read through, verified, and manually corrected every single pre-labeled row to ensure strict adherence to the decision rules and edge-case criteria.
 
 **Moment 2**
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+- *What I asked for:* An explanation and breakdown of my model's training results and epoch metrics.
+- *What came back:* An explanation of how validation loss, accuracy, and macro F1 improved across epochs, along with formatted metric tables.
+- *What I changed:* Reviewed the explanation to verify model convergence and integrated the structured metrics directly into my project documentation.
 
 **Pre-labelling disclosure:**
+I labeled the first 20 rows of the 200-row dataset completely cold to establish my baseline judgment. The remaining 180 rows were pre-labeled using an AI model seeded with my taxonomy definitions, and I subsequently read, verified, and manually corrected every single row before finalizing `labels.csv`.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
