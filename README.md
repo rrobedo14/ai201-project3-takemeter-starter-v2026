@@ -54,25 +54,26 @@ This classifier analyzes public discussion posts from `r/nba` centered around pl
      The decision rule is worth a point on its own and it's the thing most
      people leave out. Every taxonomy has a hardest boundary. Name yours. -->
 
-### `label_one`
+### `analysis`
+* **Definition:** Makes an argument backed by a specific, checkable fact. A stat, a date, a quote, or a tactical tracking metric.
+* **Example 1:**
+  > "Looking at the tracking data, the defense ran drop coverage on 74% of pick-and-rolls, which completely opened up the mid-range."
+* **Example 2:**
+  > "His true shooting percentage on isolation plays has actually held up at 58% over the last three seasons."
 
-**Definition:**
+### `hot_take`
+* **Definition:** A confident, sweeping claim with no support offered. Might be true, but isn't argued or backed by data.
+* **Example 1:**
+  > "He is a certified playoff choker and an absolute fraud who can't win without a superteam."
+* **Example 2:**
+  > "He is the undisputed GOAT and anyone who says otherwise doesn't actually understand basketball."
 
-**Example 1:**
->
-
-**Example 2:**
->
-
-### `label_two`
-
-**Definition:**
-
-**Example 1:**
->
-
-**Example 2:**
->
+### `reaction`
+* **Definition:** An immediate response to something that just happened in the game. Pure feeling, not a structured argument.
+* **Example 1:**
+  > "We are literally the worst franchise in the history of sports. Fire the coach and blow it all up right now."
+* **Example 2:**
+  > "He completely checked out on defense in the final two minutes tonight and looked totally exhausted."
 
 ### The hardest boundary
 
@@ -81,8 +82,10 @@ This classifier analyzes public discussion posts from `r/nba` centered around pl
 **The decision rule I used every time:**
 <!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
      if the tone is heated." -->
+     **The Hardest Boundary:** Between `hot_take` and `reaction`. Both lack statistical evidence and express strong opinions.
 
-
+**Decision Rule:** 
+If the text is an immediate, in-the-moment emotional outburst tied to tonight's specific game or quarter (e.g., *“checked out in the final two minutes tonight”*), it is a **reaction**. If it's a sweeping, generalized statement about a player's career or legacy that could be posted at any time of the year regardless of tonight's score (e.g., *“can't win without a superteam”*), it is a **hot_take**.
 
 ---
 
