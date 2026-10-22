@@ -1,0 +1,184 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 30,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 30,
+    "accuracy": 0.6,
+    "f1_macro": 0.48888888888888893,
+    "per_label": {
+      "analysis": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 10
+      },
+      "hot_take": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 10
+      },
+      "reaction": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8000000000000002,
+        "support": 10
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "His assist percentage on corner three-pointers accounts for 41% of his team's total corner threes.",
+      "gold": "analysis",
+      "predicted": "analysis"
+    },
+    {
+      "text": "First time seeing him play live in person and he drops 40! Best night ever.",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "He just posters two guys on a fastbreak at 39 years old! What am I watching!",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "In games where he plays over 38 minutes on the first night of a back-to-back, his fourth-quarter field goal percentage drops by 14% on the second night.",
+      "gold": "analysis",
+      "predicted": "analysis"
+    },
+    {
+      "text": "His shooting percentage on pull-up jumpers drops by 9% when defended by length.",
+      "gold": "analysis",
+      "predicted": "analysis"
+    },
+    {
+      "text": "He is a total creation of ESPN and modern sports media marketing machine.",
+      "gold": "hot_take",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Absolutely buried that game-winner from the logo and I regret screaming at 11 PM.",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Playing in the Eastern Conference for fifteen years gave him the easiest path to the Finals of any superstar ever.",
+      "gold": "hot_take",
+      "predicted": "analysis"
+    },
+    {
+      "text": "His assist-to-turnover ratio in elimination games sits at a remarkable 2.85 across 28 games.",
+      "gold": "analysis",
+      "predicted": "analysis"
+    },
+    {
+      "text": "His dominance is entirely due to genetic physical traits rather than basketball skill.",
+      "gold": "hot_take",
+      "predicted": "analysis"
+    },
+    {
+      "text": "I can't believe he missed that wide open layup to win the game. Devastated.",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "When operating as the primary pick-and-roll ball handler against blitzing defenses, his pass-out efficiency generated 1.24 points per possession.",
+      "gold": "analysis",
+      "predicted": "analysis"
+    },
+    {
+      "text": "Just watched him hit that step-back dagger in real time and I'm genuinely shaking. What a player.",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "Well that was miserable. Down 30 at halftime on national television and I'm questioning everything.",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "He completely checked out on defense in the final two minutes tonight and looked totally exhausted.",
+      "gold": "reaction",
+      "predicted": "analysis"
+    },
+    {
+      "text": "He is the most unclutch superstar in North American sports history.",
+      "gold": "hot_take",
+      "predicted": "analysis"
+    },
+    {
+      "text": "Coaches on his teams are just glorified figureheads while he runs the entire organization from the locker room.",
+      "gold": "hot_take",
+      "predicted": "analysis"
+    },
+    {
+      "text": "His fans are the most delusional subset of sports enthusiasts in the world.",
+      "gold": "hot_take",
+      "predicted": "reaction"
+    },
+    {
+      "text": "No titles won in the 2020s count as real championships due to short offseasons and injuries.",
+      "gold": "hot_take",
+      "predicted": "analysis"
+    },
+    {
+      "text": "His scoring average against top-5 defensive teams is 26.8 points per game.",
+      "gold": "analysis",
+      "predicted": "analysis"
+    },
+    {
+      "text": "His fast-break conversion rate sits at 64.1% over the past three regular seasons.",
+      "gold": "analysis",
+      "predicted": "analysis"
+    },
+    {
+      "text": "He ruined the competitive balance of the league for an entire decade.",
+      "gold": "hot_take",
+      "predicted": "analysis"
+    },
+    {
+      "text": "Down by 28 points in the second quarter. I'm turning off the TV and taking a walk.",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "The defensive rating difference with him anchoring the weak side versus sitting out is 4.8 points per 100 possessions.",
+      "gold": "analysis",
+      "predicted": "analysis"
+    },
+    {
+      "text": "Tracking his second-half minutes: when he plays the entire third quarter, his fourth-quarter rim attack frequency drops from 42% to 19%.",
+      "gold": "analysis",
+      "predicted": "analysis"
+    },
+    {
+      "text": "He is incapable of playing off the ball and forces every team into a predictable heliocentric system.",
+      "gold": "hot_take",
+      "predicted": "analysis"
+    },
+    {
+      "text": "Secured the 7th seed! Playoffs here we come, absolutely stoked for this matchup!",
+      "gold": "reaction",
+      "predicted": "analysis"
+    },
+    {
+      "text": "Five minutes to tip-off in Game 7 and my stomach is in absolute knots.",
+      "gold": "reaction",
+      "predicted": "reaction"
+    },
+    {
+      "text": "He ruined the dunk contest by refusing to participate for twenty straight years.",
+      "gold": "hot_take",
+      "predicted": "analysis"
+    },
+    {
+      "text": "Opponents shoot 44% at the rim when he is the primary rim protector, ranking in the 82nd percentile for forward defense.",
+      "gold": "analysis",
+      "predicted": "analysis"
+    }
+  ]
+}
