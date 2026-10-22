@@ -257,7 +257,6 @@ The other direction: 0 real `analysis` posts called `hot_take`.
 Roughly symmetric — the model finds this pair hard in both directions,
 which more often means the boundary itself is genuinely hard.
 
-
 **My biggest off-diagonal number, and what it means:**
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
