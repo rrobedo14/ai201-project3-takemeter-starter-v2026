@@ -414,7 +414,6 @@ learned:**
 <!-- Two sentences. Your confusion matrix is the evidence. -->
 My taxonomy intended to separate factual arguments (analysis) from unsupported opinions (hot_take) based on whether statistics carry the central claim. The model learned this boundary remarkably well overall, but its slight residual confusion occurs on posts containing decorative numbers or technical jargon where superficial statistical tokens mask an unsupported assertion.
 
-
 <!-- ═════════════════════════════════════════════════════════════════════
 
      SUBMISSION CHECKLIST — unit 5
